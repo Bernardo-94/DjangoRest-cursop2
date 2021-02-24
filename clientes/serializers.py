@@ -19,7 +19,7 @@ class ClienteSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({'rg':"RG deve conter 9 dígitos"})
         
         if not celular_valido(data['celular']):
-            raise serializers.ValidationError({'celular':"O celular deve conter de 11 a 14 dígitos"})
+            raise serializers.ValidationError({'celular':"O número do celular deve seguir o seguinte padrão: xx xxxxx-xxxx, respeitando os espaços e o traço"})
 
         return data
 
