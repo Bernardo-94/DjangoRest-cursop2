@@ -22,3 +22,5 @@ class ClienteSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({'celular':"O número do celular deve seguir o seguinte padrão: xx xxxxx-xxxx, respeitando os espaços e o traço"})
 
         return data
+
+        #testing something
