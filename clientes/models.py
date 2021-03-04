@@ -7,6 +7,7 @@ class Cliente(models.Model):
     rg = models.CharField(max_length=9)
     celular = models.CharField(max_length=14)
     ativo = models.BooleanField()
+    objects = models.Manager() #This line code is only to resolve the false alert that VSCode had shown
 
     def __str__(self):
         return self.nome
